@@ -1,0 +1,9 @@
+Show the project!
+
+
+- if @project.present?
+  = @project.title
+  = link_to 'Home', root_path
+- else
+  There's nothing here Please go to the main page.
+  = link_to 'Home', root_path

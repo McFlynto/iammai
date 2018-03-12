@@ -1,0 +1,8 @@
+%h1
+  Projekte
+
+- if @projects.present?
+  %ul.projectlist
+  - @projects.each do |p|
+    %li.projectitem
+      = p.title

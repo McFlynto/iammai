@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20180312200528) do
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.text "description"
+    t.string "slug"
     t.string "previewImages"
     t.json "images"
     t.datetime "created_at", null: false
