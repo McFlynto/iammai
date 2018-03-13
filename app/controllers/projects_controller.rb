@@ -31,6 +31,6 @@ class ProjectsController < ApplicationController
 
   def project_params
     params.require(:project)
-          .permit(:title, :slug, :description, :previewImages, { images: [] })
+          .permit(:title, :slug, :description, :previewImage, { images: [] })
   end
 end

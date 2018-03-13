@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration[5.1]
       t.string :title
       t.text :description
       t.string :slug
-      t.string :previewImages
+      t.string :previewImage
       t.json :images
 
       t.timestamps

@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20180312200528) do
     t.string "title"
     t.text "description"
     t.string "slug"
-    t.string "previewImages"
+    t.string "previewImage"
     t.json "images"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

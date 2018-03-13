@@ -1,4 +1,4 @@
-class PreviewImagesUploader < CarrierWave::Uploader::Base
+class PreviewImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
