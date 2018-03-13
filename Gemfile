@@ -38,6 +38,8 @@ gem 'carrierwave-processing'
 
 gem 'mini_magick'
 
+gem 'dropzonejs-rails'
+
 # AWS
 gem 'carrierwave-aws'
 

@@ -1,21 +1,21 @@
 %h1
   New project
 
-  = form_for :project, :url => {:controller => 'projects', :action => 'create'} do |f|
-    = label_tag :title
-    = f.text_field :title
-    %br/
-    = label_tag :slug
-    = f.text_field :slug
-    %br/
-    = label_tag :description
-    = f.text_area :description
-    %br/
-    = label_tag :previewImage
-    = f.file_field :previewImage
-    %br/
-    = label_tag :images
-    = f.file_field :images, multiple: true
-    = button_tag 'Submit', type: :submit
+= form_for :project, :url => {:controller => 'projects', :action => 'create'} do |f|
+  = label_tag :title
+  = f.text_field :title
+  %br/
+  = label_tag :slug
+  = f.text_field :slug
+  %br/
+  = label_tag :description
+  = f.text_area :description
+  %br/
+  = label_tag :previewImage
+  = f.file_field :previewImage
+  %br/
+  = label_tag :images
+  = f.file_field :images, multiple: true
+  = button_tag 'Submit', type: :submit
 
 = link_to 'Back', '/manage'
