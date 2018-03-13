@@ -1,5 +1,5 @@
 # Projects
 class Project < ApplicationRecord
   mount_uploader :previewImages, PreviewImagesUploader
-  mount_uploader :images, ImagesUploader
+  mount_uploaders :images, ImagesUploader
 end

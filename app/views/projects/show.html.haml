@@ -3,6 +3,13 @@ Show the project!
 
 - if @project.present?
   = @project.title
+  %br/
+  = @project.description
+  %br/
+  = @project.previewImages
+  %br/
+  - @project.images.each do |i|
+    = i
   = link_to 'Home', root_path
 - else
   There's nothing here Please go to the main page.

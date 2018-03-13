@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   get '/manage', to: 'static_pages#manage', as: 'manage'
 
-  resources :projects, param: :slug, only: :show
+  resources :projects, param: :slug, only: %i[show update destroy]
+  resources :projects, only: :create
 end
