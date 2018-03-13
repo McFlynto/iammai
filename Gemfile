@@ -41,9 +41,6 @@ gem 'mini_magick'
 # AWS
 gem 'carrierwave-aws'
 
-# Backend
-gem 'rails_admin'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
