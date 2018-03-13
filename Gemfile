@@ -38,6 +38,9 @@ gem 'carrierwave-processing'
 
 gem 'mini_magick'
 
+# AWS
+gem 'carrierwave-aws'
+
 # Backend
 gem 'rails_admin'
 
