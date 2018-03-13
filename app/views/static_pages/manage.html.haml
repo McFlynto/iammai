@@ -15,24 +15,10 @@
     %li.projectimages
       - p.images.each do |i|
         = i
-    = button_to "delete", {controller: :projects, action: 'destroy', slug: p.slug }, method: :delete
+    = button_to 'delete', {controller: :projects, action: 'destroy', slug: p.slug }, method: :delete
+    = link_to 'update', 'manage/edit/' + p.slug
 
-%h2
-  New project
+%br/
+%br/
 
-  = form_for :project, :url => {:controller => 'projects', :action => 'create'} do |f|
-    = label_tag :title
-    = f.text_field :title
-    %br/
-    = label_tag :slug
-    = f.text_field :slug
-    %br/
-    = label_tag :description
-    = f.text_area :description
-    %br/
-    = label_tag :previewImages
-    = f.file_field :previewImages
-    %br/
-    = label_tag :images
-    = f.file_field :images, multiple: true
-    = button_tag 'Submit', type: :submit
+= link_to 'New Project', '/manage/new'

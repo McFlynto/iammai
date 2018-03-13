@@ -4,16 +4,27 @@ class ProjectsController < ApplicationController
     @project = Project.find_by(slug: params[:slug])
   end
 
-  def create
-    @project = Project.new(project_params)
-    @project.save
+  def new
+    @project = Project.new
   end
 
-  def update; end
+  def create
+    @project = Project.new(project_params)
+    redirect_to '/manage' if @project.save
+  end
+
+  def edit
+    @project = Project.find_by(slug: params[:slug])
+  end
+
+  def update
+    @project = Project.find_by(slug: params[:slug])
+    redirect_to '/manage' if @project.update(project_params)
+  end
 
   def destroy
     @project = Project.find_by(slug: params[:slug])
-    @project.destroy
+    redirect_to '/manage' if @project.destroy
   end
 
   private

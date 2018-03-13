@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   root to: 'static_pages#home'
 
   get '/manage', to: 'static_pages#manage', as: 'manage'
+  get '/manage/new', to: 'projects#new'
+  get '/manage/edit/:slug', to: 'projects#edit'
 
-  resources :projects, param: :slug, only: %i[show update destroy]
-  resources :projects, only: :create
+  resources :projects, param: :slug, only: %i[show create update destroy]
 end
