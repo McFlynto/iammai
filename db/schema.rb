@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180312200528) do
+ActiveRecord::Schema.define(version: 20180317195520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20180312200528) do
     t.json "images"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "sort_index"
   end
 
 end

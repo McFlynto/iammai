@@ -5,10 +5,10 @@ class StaticPagesController < ApplicationController
                                only: :manage
 
   def home
-    @projects = Project.all
+    @projects = Project.all.order(sort_index: :asc)
   end
 
   def manage
-    @projects = Project.all
+    @projects = Project.all.order(sort_index: :asc)
   end
 end

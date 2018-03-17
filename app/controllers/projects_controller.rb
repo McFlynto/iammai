@@ -39,12 +39,12 @@ class ProjectsController < ApplicationController
 
   def project_params
     params.require(:project)
-          .permit(:title, :slug, :description, :previewImage, { images: [] })
+          .permit(:title, :slug, :description, :previewImage, :sort_index, { images: [] })
   end
 
   def update_params
     params.require(:project)
-          .permit(:title, :slug, :description, :previewImage)
+          .permit(:title, :slug, :description, :sort_index, :previewImage)
   end
 
   def images_params
