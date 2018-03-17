@@ -16,7 +16,7 @@
       - p.images.each do |i|
         = i
     = button_to 'delete', {controller: :projects, action: 'destroy', slug: p.slug }, method: :delete
-    = link_to 'update', 'manage/edit/' + p.slug
+    = link_to 'update', '/manage/edit/' + p.slug
 
 %br/
 %br/

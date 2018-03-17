@@ -11,9 +11,13 @@
   = label_tag :description
   = f.text_area :description
   %br/
+  = image_tag(@project.previewImage, class: 'manage-previewimage')
   = label_tag :previewImage
   = f.file_field :previewImage
   %br/
+  - @project.images.each_with_index do |image, index|
+    = image_tag(image, class: 'manage-images')
+    = link_to 'Delete image', '/manage/edit/' + @project.slug + '/delete_image' + '/' + index.to_s, :method => :post
   = label_tag :images
   = f.file_field :images, multiple: true
   = button_tag 'Submit', type: :submit

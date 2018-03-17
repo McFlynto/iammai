@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get '/manage/new', to: 'projects#new'
   get '/manage/edit/:slug', to: 'projects#edit'
 
+  post '/manage/edit/:slug/delete_image/:id', to: 'projects#delete_image'
+
   resources :projects, param: :slug, only: %i[show create update destroy]
 end
