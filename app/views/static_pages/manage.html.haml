@@ -5,20 +5,28 @@
   %ul.projectlist
   - @projects.each do |p|
     %li.projectitem
+      Title:
       = p.title
     %li.projectdescription
+      Description:
       = p.description
     %li.projectslug
+      Slug:
       = p.slug
-    %li.projectpreview
-      = p.previewImage
-    %li.projectimages
-      - p.images.each do |i|
-        = i
+    - if p.previewImage.present?
+      %li.projectpreview
+        Preview:
+        = image_tag(p.previewImage.small)
+    - if p.images.present?
+      %li.projectimages
+        Images:
+        - p.images.each do |i|
+          = image_tag(i.thumb)
     = button_to 'delete', {controller: :projects, action: 'destroy', slug: p.slug }, method: :delete
     = link_to 'update', '/manage/edit/' + p.slug
+    %br/
+    %br/
+    %br/
 
-%br/
-%br/
 
 = link_to 'New Project', '/manage/new'
