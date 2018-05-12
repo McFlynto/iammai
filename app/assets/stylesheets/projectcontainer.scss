@@ -1,0 +1,10 @@
+.projectcontainer {
+  display: flex;
+  justify-content: center;
+  grid-column: 2 / 3;
+}
+
+.previewImage {
+  width: 300px;
+  height: 300px;
+}

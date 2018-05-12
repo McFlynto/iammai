@@ -1,5 +1,9 @@
-%h1 Work in progress
+= render 'shared/header'
+= render 'shared/navigation'
 
-- if @projects.present?
-  - @projects.each do |p|
-    = link_to p.title, "/projects/" + p.slug
+.project-grid
+  - if @projects.present?
+    - @projects.each do |p|
+      = render 'shared/projectcontainer', project: p
+
+= render 'shared/footer'
