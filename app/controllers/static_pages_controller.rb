@@ -11,4 +11,8 @@ class StaticPagesController < ApplicationController
   def manage
     @projects = Project.all.order(sort_index: :asc)
   end
+
+  def about; end
+
+  def imprint; end
 end
