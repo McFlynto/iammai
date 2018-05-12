@@ -1,15 +1,12 @@
-Show the project!
-
-
 - if @project.present?
-  = @project.title
-  %br/
-  = @project.description
-  %br/
-  = @project.previewImage
-  %br/
-  - @project.images.each do |i|
-    = i
+  .project-title
+    = @project.title
+  .project-description
+    = @project.description
+  .scroller
+    - @project.images.each do |i|
+      .slick-slide
+        = image_tag(i, class: 'project-image')
   = link_to 'Home', root_path
 - else
   There's nothing here. Please go to the main page.
