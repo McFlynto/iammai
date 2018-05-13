@@ -17,8 +17,24 @@
  @import 'slick';
  @import 'slick-theme';
 
+ // Fonts
+
+  @font-face {
+   font-family: "MeltowSan100 - Regular";
+   src: url('/assets/Typesketchbook - MeltowSan100-Regular.otf') format("truetype");
+  }
+  @font-face {
+   font-family: "MeltowSan100 - Italic";
+   src: url('/assets/Typesketchbook - MeltowSan100-Italic.otf') format("truetype");
+  }
+  @font-face {
+   font-family: "MeltowSan200 - Regular";
+   src: url('/assets/Typesketchbook - MeltowSan200-Regular.otf') format("truetype");
+  }
+
  body {
    margin: 0;
    padding: 0;
+   font-family: 'MeltowSan100 - Regular', sans-serif;
    font-size: 10px;
  }
