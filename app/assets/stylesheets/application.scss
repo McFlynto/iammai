@@ -32,9 +32,12 @@
    src: font-url('MeltowSan200-Regular.otf') format("truetype");
   }
 
+ html {
+   font-size: 10px;
+ }
+
  body {
    margin: 0;
    padding: 0;
    font-family: 'MeltowSan100-Regular', sans-serif;
-   font-size: 10px;
  }
