@@ -1,13 +1,16 @@
+= render 'shared/header'
+= render 'shared/navigation'
+
 .project
   - if @project.present?
-    .project-title
-      = @project.title
-    .project-description
-      = @project.description
     .scroller
       - @project.images.each do |i|
         .slick-slide
           = image_tag(i, class: 'project-image')
+    .project-title
+      = @project.title
+    .project-description
+      = @project.description
     = link_to 'Home', root_path
   - else
     There's nothing here. Please go to the main page.
