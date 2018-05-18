@@ -6,11 +6,13 @@
   display: none;
   flex-direction: column;
   align-items: center;
+  padding-top: 4px;
 
   font-family: 'MeltowSan100-Regular', sans-serif;
   font-size: 2rem;
 
-  background-color: aquamarine;
+  background-color: white;
+  border: 2px solid black;
 
   &__show {
     display: flex;
@@ -25,4 +27,11 @@
   &:hover {
     text-decoration: underline;
   }
+}
+
+.close-nav {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  font-size: 3rem;
 }
