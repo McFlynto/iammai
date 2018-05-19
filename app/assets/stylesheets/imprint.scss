@@ -1,3 +1,35 @@
 .imprint {
-  margin-top: 12rem;
+  padding: 1rem;
+  margin-top: 13rem;
+}
+
+.address-container {
+  font-size: 1.6rem;
+}
+
+.design-ref {
+  &__header {
+    padding-top: 2rem;
+    margin: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
+}
+
+.marke-anker {
+  width: 2rem;
+  transform: translateY(0.6rem);
+}
+
+.ref-link {
+  text-decoration: none;
+  color: grey;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.legal {
+  margin-top: 2rem;
 }
