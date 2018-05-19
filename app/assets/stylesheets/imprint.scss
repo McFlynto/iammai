@@ -7,6 +7,25 @@
   font-size: 1.6rem;
 }
 
+.email-field {
+  // Reset link styling for webkit browsers
+  a {
+    text-decoration: none;
+    color: grey;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  text-decoration: none;
+  color: grey;
+
+  &:hover {
+    color: red;
+  }
+}
+
 .design-ref {
   &__header {
     padding-top: 2rem;
