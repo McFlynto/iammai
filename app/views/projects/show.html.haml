@@ -7,11 +7,14 @@
       - @project.images.each do |i|
         .slick-slide
           = image_tag(i, class: 'project-image')
-    .project-title
-      = @project.title
-    .project-description
-      = @project.description
-    = link_to 'Home', root_path
+    .project-text
+      .project-title
+        = @project.title
+      .project-description
+        = @project.description
+    = link_to 'Home ->', root_path, class: 'home-link'
   - else
     There's nothing here. Please go to the main page.
-    = link_to 'Home', root_path
+    = link_to 'Home ->', root_path, class: 'home-link'
+
+= render 'shared/footer'
