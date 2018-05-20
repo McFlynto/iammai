@@ -1,0 +1,33 @@
+.mini-banner {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  height: 2.2rem;
+  z-index: 30;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.mountains-back {
+  position: fixed;
+  bottom: -10rem;
+  left: -50rem;
+  right: 0;
+  height: auto;
+  z-index: 1;
+}
+
+.mountains-front {
+  position: fixed;
+  bottom: -42rem;
+  left: -54.8rem;
+  right: 0;
+  height: auto;
+  z-index: 20;
+}

@@ -1,6 +1,8 @@
 .project-grid {
+  position: relative;
   display: grid;
   grid-template: 300px / 1fr 94% 4%;
   grid-row-gap: 2rem;
   margin-top: 13rem;
+  z-index: 5;
 }
