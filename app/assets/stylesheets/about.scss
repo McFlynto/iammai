@@ -1,3 +1,36 @@
 .about {
-  margin-top: 12rem;
+  padding: 1rem;
+  margin-top: 13rem;
+
+  &__image-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+  }
+
+  &__image {
+    width: 30rem;
+    height: 100%;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+  }
+
+  &__highlight {
+    color: rgb(203, 62, 19);
+  }
+
+  &__home-link {
+    position: absolute;
+    margin: 2rem 0;
+    font-family: 'MeltowSan100-Regular';
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: grey;
+    &:hover {
+      color: red;
+    }
+  }
 }
