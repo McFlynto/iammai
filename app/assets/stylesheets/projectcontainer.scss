@@ -1,3 +1,5 @@
+@import 'variables';
+
 .projectcontainer {
   display: flex;
   justify-content: flex-end;
@@ -7,4 +9,10 @@
 .previewImage {
   width: 300px;
   height: 300px;
+}
+
+@media only screen and (min-width: $small-breakpoint) {
+  .projectcontainer {
+    grid-column: auto;
+  }
 }

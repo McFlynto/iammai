@@ -1,3 +1,5 @@
+@import 'variables';
+
 .mini-banner {
   position: fixed;
   bottom: 2rem;
@@ -21,6 +23,8 @@
   right: 0;
   height: auto;
   z-index: 1;
+
+  pointer-events: none;
 }
 
 .mountains-front {
@@ -30,4 +34,22 @@
   right: 0;
   height: auto;
   z-index: 20;
+
+  pointer-events: none;
+}
+
+@media only screen and (min-width: $small-breakpoint) {
+  .mini-banner {
+    display: none;
+  }
+
+  .mountains-back {
+    bottom: 0rem;
+    left: -10rem;
+  }
+
+  .mountains-front {
+    bottom: -32rem;
+    left: -14.8rem;
+  }
 }
