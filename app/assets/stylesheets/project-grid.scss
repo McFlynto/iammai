@@ -1,26 +1,56 @@
 @import 'variables';
 
+.grid-container {
+  position: relative;
+  margin-top: 13rem;
+  z-index: 20;
+}
+
 .project-grid {
   position: relative;
   display: grid;
-  grid-template: 300px / 1fr 94% 4%;
+  grid-template: 300px / 1fr 94% 2rem;
   grid-row-gap: 2rem;
-  margin-top: 13rem;
   z-index: 5;
+  padding: 0 0 2rem 0;
+}
+
+.button-left {
+  display: none;
+}
+
+.button-right {
+  display: none;
 }
 
 @media only screen and (min-width: $small-breakpoint) {
+  .grid-container {
+    margin: 13rem 0 2rem 20rem;
+    overflow-y: scroll;
+  }
+
   .project-grid {
-    position: absolute;
     grid-template: 300px 300px / 300px;
     grid-auto-columns: 300px;
     grid-auto-flow: column;
     grid-gap: 2rem;
 
-    left: 18rem;
+    padding: 0 0 0 0;
+  }
 
-    overflow-y: scroll;
+  .button-left {
+    display: block;
+    position: fixed;
+    top: 16rem;
+    left: 14rem;
+    z-index: 20;
+  }
 
-    padding-right: 2rem;
+  .button-right {
+    display: block;
+    position: fixed;
+    top: 16rem;
+    right: 12rem;
+    z-index: 20;
   }
 }

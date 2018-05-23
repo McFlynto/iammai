@@ -1,9 +1,13 @@
 = render 'shared/header'
 = render 'shared/navigation'
 
-.project-grid
-  - if @projects.present?
-    - @projects.each do |p|
-      = render 'shared/projectcontainer', project: p
+#grid-container.grid-container
+  #project-grid.project-grid
+    - if @projects.present?
+      - @projects.each do |p|
+        = render 'shared/projectcontainer', project: p
+
+%button{id: 'button-left', class: 'button-left'} <-
+%button{id: 'button-right', class: 'button-right'} ->
 
 = render 'shared/footer'
