@@ -1,3 +1,5 @@
+@import 'variables';
+
 .header {
   display: flex;
   justify-content: center;
@@ -14,8 +16,27 @@
 }
 
 .logo {
-  width: 10rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   z-index: 10;
+
+  font-family: 'MeltowSan200-Regular';
+  font-size: 1.8rem;
+
+  &__text-left {
+    display: none;
+    padding-right: 1rem;
+  }
+
+  &__text-right {
+    display: none;
+    padding-left: 1rem;
+  }
+
+  &__image {
+    width: 10rem;
+  }
 }
 
 .rain {
@@ -24,4 +45,16 @@
   right: -16rem;
   width: 34rem;
   height: auto;
+}
+
+@media only screen and (min-width: $small-breakpoint) {
+  .logo {
+    &__text-left {
+      display: block;
+    }
+
+    &__text-right {
+      display: block;
+    }
+  }
 }
