@@ -8,10 +8,10 @@ $(document).ready(() => {
 
   $('#button-left').on('click', () => {
     const scrollDiv = document.getElementById('grid-container');
-    scrollDiv.scrollLeft += 300;
+    scrollDiv.scrollLeft -= 300;
   });
   $('#button-right').on('click', () => {
     const scrollDiv = document.getElementById('grid-container');
-    scrollDiv.scrollLeft -= 300;
+    scrollDiv.scrollLeft += 300;
   });
 })
