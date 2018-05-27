@@ -1,3 +1,5 @@
+@import 'variables';
+
 .imprint {
   padding: 1rem;
   margin-top: 13rem;
@@ -56,5 +58,11 @@
     margin: 0;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
+  }
+}
+
+@media only screen and (min-width: $small-breakpoint) {
+  .imprint {
+    margin: 13rem 12rem 0 24rem;
   }
 }
