@@ -7,7 +7,11 @@
       - @projects.each do |p|
         = render 'shared/projectcontainer', project: p
 
-%button{id: 'button-left', class: 'button-left'} <-
-%button{id: 'button-right', class: 'button-right'} ->
+#button-left.button-left
+  .arrow-left
+    = '<-'
+#button-right.button-right
+  .arrow-right
+    = '->'
 
 = render 'shared/footer'
