@@ -26,7 +26,7 @@
 
   pointer-events: none;
 
-  background-image: url('mountains_back.png');
+  background-image: asset-url('mountains_back.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -42,7 +42,7 @@
 
   pointer-events: none;
 
-  background-image: url('mountains_front.png');
+  background-image: asset-url('mountains_front.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
