@@ -1,23 +1,24 @@
 = render 'shared/header'
-= render 'shared/navigation'
 
-.project
-  - if @project.present?
-    .scroller
-      - @project.images.each do |i|
-        .slick-slide
-          = image_tag(i, class: 'project-image')
-    .project-text
-      .project-title
-        = @project.title
-      .project-description
-        = @project.description
-      - if @project.link_url.present?
-        .project-link
-          = link_to @project.link_name, @project.link_url, target: '_blank'
-    = link_to 'Home ->', root_path, class: 'home-link'
-  - else
-    There's nothing here. Please go to the main page.
-    = link_to 'Home ->', root_path, class: 'home-link'
+.wide-page-wrapper
+  = render 'shared/navigation'
+  .project
+    - if @project.present?
+      .scroller
+        - @project.images.each do |i|
+          .slick-slide
+            = image_tag(i, class: 'project-image')
+      .project-text
+        .project-title
+          = @project.title
+        .project-description
+          = @project.description
+        - if @project.link_url.present?
+          .project-link
+            = link_to @project.link_name, @project.link_url, target: '_blank'
+      = link_to 'Home ->', root_path, class: 'home-link'
+    - else
+      There's nothing here. Please go to the main page.
+      = link_to 'Home ->', root_path, class: 'home-link'
 
 = render 'shared/footer'

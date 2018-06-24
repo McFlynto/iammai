@@ -1,29 +1,30 @@
 = render 'shared/header'
-= render 'shared/navigation'
 
-.about
-  %h1.about__headline About
-  .about__image-container
-    = image_tag 'maike.jpg', class: 'about__image'
-  .about__text
-    Nice to see you on my site. I am Maike, originally from Northern Germany and
-    now living and working in Bochum.
-    On my page you will find a selection of different projects.
-    With all of my projects, a good concept and individuality are especially important to me.
-    If you decide to work with me, I can offer high-quality illustrations,
-    as well as editorial and layouts for books,
-    flyers and magazines. I love to create a complete corporate identity from scratch,
-    but can also improveme existing corporate designs including advertising material
-    and webdesign.
-    %br
-    %br
-    %span.about__highlight Interested?
-    %br
-    %br
-    Then just get in touch with me! I look forward to hearing from you.
-    %br
-    %br
-    #email-field.email-field
-      %noscript
-        Please enable javascript!
-    = link_to 'Home ->', root_path, class: 'about__home-link'
+.wide-page-wrapper
+  = render 'shared/navigation'
+  .about
+    %h1.about__headline About
+    .about__image-container
+      = image_tag 'maike.jpg', class: 'about__image'
+    .about__text
+      Nice to see you on my site. I am Maike, originally from Northern Germany and
+      now living and working in Bochum.
+      On my page you will find a selection of different projects.
+      With all of my projects, a good concept and individuality are especially important to me.
+      If you decide to work with me, I can offer high-quality illustrations,
+      as well as editorial and layouts for books,
+      flyers and magazines. I love to create a complete corporate identity from scratch,
+      but can also improveme existing corporate designs including advertising material
+      and webdesign.
+      %br
+      %br
+      %span.about__highlight Interested?
+      %br
+      %br
+      Then just get in touch with me! I look forward to hearing from you.
+      %br
+      %br
+      #email-field.email-field
+        %noscript
+          Please enable javascript!
+      = link_to 'Home ->', root_path, class: 'about__home-link'

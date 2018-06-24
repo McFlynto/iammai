@@ -57,4 +57,21 @@
       display: block;
     }
   }
+
+  .rain {
+    width: 40rem;
+  }
+}
+
+
+@media only screen and (min-width: $medium-breakpoint) {
+  .rain {
+    width: 50rem;
+  }
+}
+
+@media only screen and (min-width: $large-breakpoint) {
+  .rain {
+    width: 60rem;
+  }
 }

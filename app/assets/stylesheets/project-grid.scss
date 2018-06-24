@@ -1,5 +1,9 @@
 @import 'variables';
 
+.wide-page-wrapper {
+  position: relative
+}
+
 .grid-container {
   position: relative;
   margin: 13rem 0 0 0;
@@ -45,24 +49,21 @@
 
   .button-left {
     display: block;
-    position: fixed;
-    top: 32.2rem;
-    left: 22rem;
+    position: absolute;
+    top: 20.4rem;
+    left: 24rem;
     z-index: 20;
   }
 
   .button-right {
     display: block;
-    position: fixed;
-    top: 32.2rem;
-    right: 1rem;
+    position: absolute;
+    top: 20.4rem;
+    right: 2rem;
     z-index: 20;
   }
 
   .button-right, .button-left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 14rem;
     height: 14rem;
     border-radius: 100%;
@@ -101,5 +102,12 @@
         transform:rotate(10deg);
       }
     }
+  }
+}
+
+@media only screen and (min-width: $large-breakpoint) {
+  .wide-page-wrapper {
+    margin: 20rem auto 0 auto;
+    width: 160rem;
   }
 }

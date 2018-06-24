@@ -1,17 +1,19 @@
 = render 'shared/header'
-= render 'shared/navigation'
 
-#grid-container.grid-container
-  #project-grid.project-grid
-    - if @projects.present?
-      - @projects.each do |p|
-        = render 'shared/projectcontainer', project: p
+.wide-page-wrapper
+  #grid-container.grid-container
+    #project-grid.project-grid
+      - if @projects.present?
+        - @projects.each do |p|
+          = render 'shared/projectcontainer', project: p
 
   #button-left.button-left
     .arrow-left
       = image_tag 'arrow-left.svg'
   #button-right.button-right
     .arrow-right
-      = image_tag 'arrow-right.svg'
+    = image_tag 'arrow-right.svg'
+
+  = render 'shared/navigation'
 
 = render 'shared/footer'

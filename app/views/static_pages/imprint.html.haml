@@ -1,31 +1,32 @@
 = render 'shared/header'
-= render 'shared/navigation'
 
-.imprint
-  %h1 Imprint
-  .address-container
-    Responsible for this site following §55 Abs.2 RStV is:
-    %br/
-    %br/
-    Maike Weckenbrock
-    %br>/
-    Neustraße 13
-    %br>/
-    44787 Bochum
-    %br/
-    %br/
-    E-Mail:
-    #email-field.email-field
-      %noscript
-        Please enable javascript!
+.wide-page-wrapper
+  = render 'shared/navigation'
+  .imprint
+    %h1 Imprint
+    .address-container
+      Responsible for this site following §55 Abs.2 RStV is:
+      %br/
+      %br/
+      Maike Weckenbrock
+      %br>/
+      Neustraße 13
+      %br>/
+      44787 Bochum
+      %br/
+      %br/
+      E-Mail:
+      #email-field.email-field
+        %noscript
+          Please enable javascript!
 
-  .design-ref
-    %h2.design-ref__header Website (of course) made with love by:
-    = link_to 'https://helge.media', class: 'ref-link', target: '_blank' do
-      = image_tag 'marke_anker.svg', class: 'marke-anker'
-      Helge.Media
+    .design-ref
+      %h2.design-ref__header Website (of course) made with love by:
+      = link_to 'https://helge.media', class: 'ref-link', target: '_blank' do
+        = image_tag 'marke_anker.svg', class: 'marke-anker'
+        Helge.Media
 
-  .legal
-    %h2.legal__header Data protection
-    None of your personal data will be stored by this web page and there are no
-    cookies, Google Analytics, Facebook tracking or anything else. Enjoy!
+    .legal
+      %h2.legal__header Data protection
+      None of your personal data will be stored by this web page and there are no
+      cookies, Google Analytics, Facebook tracking or anything else. Enjoy!
