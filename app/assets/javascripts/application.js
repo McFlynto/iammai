@@ -13,4 +13,5 @@
 //= require jquery3
 //= require rails-ujs
 //= require jquery.slick
+//= require perfect-scrollbar
 //= require_tree .
