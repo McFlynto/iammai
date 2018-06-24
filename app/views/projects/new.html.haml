@@ -19,6 +19,13 @@
   %br/
   = label_tag :images
   = f.file_field :images, multiple: true
+  %br/
+  = label_tag :link_name
+  = f.text_field :link_name
+  %br/
+  = label_tag :link_url
+  = f.text_field :link_url
+  %br/
   = button_tag 'Submit', type: :submit
 
 = link_to 'Back', '/manage'

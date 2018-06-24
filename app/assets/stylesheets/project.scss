@@ -48,6 +48,21 @@
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+.project-link {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  a {
+    font-family: 'MeltowSan100-Regular';
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: grey;
+    &:hover {
+      color: red;
+    }
+  }
+}
+
 @media only screen and (min-width: $small-breakpoint) {
   .project {
     margin: 13rem 12rem 0 24rem;

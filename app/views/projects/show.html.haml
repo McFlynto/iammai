@@ -12,6 +12,9 @@
         = @project.title
       .project-description
         = @project.description
+      - if @project.link_url.present?
+        .project-link
+          = link_to @project.link_name, @project.link_url, target: '_blank'
     = link_to 'Home ->', root_path, class: 'home-link'
   - else
     There's nothing here. Please go to the main page.
