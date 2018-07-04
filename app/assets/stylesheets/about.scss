@@ -40,23 +40,24 @@
 @media only screen and (min-width: $small-breakpoint) {
   .about {
     display: grid;
-    grid-template: auto auto / minmax(5rem, 70rem) minmax(15rem, 30rem);
+    grid-template: 5rem minmax(20rem, 40rem) / 5fr 8fr;
     margin: 13rem 12rem 0 24rem;
 
     &__text {
       grid-column: 1;
       grid-row: 2;
-      padding-right: 0.6rem;
+      padding-right: 1rem;
     }
 
     &__image-container {
       grid-column: 2;
       grid-row: 2;
+      display: block;
     }
 
     &__image {
-      width: auto;
-      max-height: 35rem;
+      width: 100%;
+      height: auto;
     }
 
     &__headline {
