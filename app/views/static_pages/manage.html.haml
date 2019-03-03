@@ -1,32 +1,32 @@
-%h1
-  Projects
+.projectmanagement
+  %h1
+    Projects
 
-- if @projects.present?
-  %ul.projectlist
-  - @projects.each do |p|
-    %li.projectitem
-      Title:
-      = p.title
-    %li.projectdescription
-      Description:
-      = p.description
-    %li.projectslug
-      Slug:
-      = p.slug
-    - if p.previewImage.present?
-      %li.projectpreview
-        Preview:
-        = image_tag(p.previewImage.small)
-    - if p.images.present?
-      %li.projectimages
-        Images:
-        - p.images.each do |i|
-          = image_tag(i.thumb)
-    = button_to 'delete', {controller: :projects, action: 'destroy', slug: p.slug }, method: :delete
-    = link_to 'update', '/manage/edit/' + p.slug
-    %br/
-    %br/
-    %br/
+  - if @projects.present?
+    .project-list
+      - @projects.each do |p|
+        .project-container
+          .projectitem
+            Title:
+            = p.title
+          .projectdescription
+            Description:
+            = p.description
+          .projectslug
+            Slug:
+            = p.slug
+          - if p.previewImage.present?
+            .projectpreview
+              Preview:
+              = image_tag(p.previewImage.small)
+          - if p.images.present?
+            .projectimages
+              Images:
+              .imagecontainer
+                - p.images.each do |i|
+                  = image_tag(i.thumb)
+          = button_to 'delete project', { controller: :projects, action: 'destroy', slug: p.slug }, method: :delete, class: 'delete-button'
+          = button_to 'update project', '/manage/edit/' + p.slug, class: 'update-button', method: :get
 
-
-= link_to 'New Project', '/manage/new'
+  .new-link
+    = link_to 'New Project', '/manage/new'

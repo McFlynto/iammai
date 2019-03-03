@@ -1,7 +1,197 @@
+.projectmanagement {
+  h1 {
+    font-size: 22px;
+    padding: 14px;
+  }
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.project-container {
+  box-sizing: border-box;
+  width: 98%;
+  height: auto;
+  border: solid black 2px;
+  padding: 10px;
+  margin: 0 0 20px 0;
+}
+
+.projectitem, .projectdescription, .projectslug {
+  font-size: 16px;
+  margin: 0 0 6px 0;
+}
+
+.projectitem {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.projectpreview {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 6px 0;
+
+  img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.projectimages {
+  font-size: 16px;  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 6px 0;
+}
+
+.imagecontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  img {
+    margin: 0 4px 0 0;
+  }
+}
+
+.delete-button {
+  width: 150px;
+  font-size: 12px;
+  margin: 20px 0 6px 0;  
+  color: #494949;
+  text-transform: uppercase;
+  background: #ffffff;
+  padding: 10px;
+  border: 2px solid #494949;
+  border-radius: 5px;
+  display: inline-block;
+
+  &:hover {
+    color: #ffffff;
+    background: #f03716;
+    border-color: #f03716;
+    transition: all 0.4s ease 0s;
+  }
+}
+
+.update-button {
+  width: 150px;
+  font-size: 12px;
+  margin: 0 0 6px 0;  
+  color: #494949;
+  text-transform: uppercase;
+  background: #ffffff;
+  padding: 10px;
+  border: 2px solid #494949;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    color: #ffffff;
+    background: #16f0a7;
+    border-color: #16f0a7;
+    transition: all 0.4s ease 0s;
+  }
+}
+
+.new-link {
+  font-size: 18px;
+  margin: 0 0 0 10px;
+  padding: 30px 0;
+}
+
+.new-project-page, .edit-project-page {
+  padding: 10px;
+  box-sizing: border-box;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    label {
+      font-size: 16px;
+    }
+
+    button {
+      width: 150px;
+      font-size: 12px;
+      margin: 0 0 6px 0;  
+      color: #494949;
+      text-transform: uppercase;
+      background: #ffffff;
+      padding: 10px;
+      border: 2px solid #494949;
+      border-radius: 5px;
+      display: inline-block;
+      text-decoration: none;
+    
+      &:hover {
+        color: #ffffff;
+        background: #16f0a7;
+        border-color: #16f0a7;
+        transition: all 0.4s ease 0s;
+      }
+    }
+
+    #project_description {
+      width: 400px;
+      height: 200px;
+    }
+  }
+}
+
+.back-link {
+  font-size: 18px;
+  padding: 16px 0;
+}
+
+.delete-image-button {
+  width: auto;
+  font-size: 12px;
+  margin: 10px 0 40px 0;  
+  text-decoration: none;
+  color: #494949;
+  text-transform: uppercase;
+  background: #ffffff;
+  padding: 10px;
+  border: 2px solid #494949;
+  border-radius: 5px;
+  display: inline-block;
+
+  &:hover {
+    color: #ffffff;
+    background: #f03716;
+    border-color: #f03716;
+    transition: all 0.4s ease 0s;
+  }
+}
+
+.separator {
+  box-sizing: border-box;
+  margin: 10px 0;
+  align-self: center;
+  width: 98%;
+  height: 2px;
+  background-color: black;
+}
+
 .manage-previewimage {
-  width: 200px;
+  max-width: 300px;
+  max-height: 300px;
+  margin: 0 0 10px 0;
 }
 
 .manage-images {
-  width: 200px;
+  max-width: 50%;
 }

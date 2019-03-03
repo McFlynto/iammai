@@ -1,35 +1,38 @@
-%h1
-  Edit project
+.edit-project-page
+  %h1
+    Edit project
 
-= form_for :project, :url => {:controller => 'projects', :action => 'update'}, method: :patch do |f|
-  = label_tag :title
-  = f.text_field :title
-  %br/
-  = label_tag :slug
-  = f.text_field :slug
-  %br/
-  = label_tag :description
-  = f.text_area :description
-  %br/
-  = label_tag :sort_index
-  = f.number_field :sort_index
-  %br/
-  = image_tag(@project.previewImage, class: 'manage-previewimage')
-  = label_tag :previewImage
-  = f.file_field :previewImage
-  %br/
-  - @project.images.each_with_index do |image, index|
-    = image_tag(image, class: 'manage-images')
-    = link_to 'Delete image', '/manage/edit/' + @project.slug + '/delete_image' + '/' + index.to_s, :method => :post
-  = label_tag :images
-  = f.file_field :images, multiple: true
-  %br/
-  = label_tag :link_name
-  = f.text_field :link_name
-  %br/
-  = label_tag :link_url
-  = f.text_field :link_url
-  %br/
-  = button_tag 'Submit', type: :submit
+  = form_for :project, :url => {:controller => 'projects', :action => 'update'}, method: :patch do |f|
+    = label_tag :title
+    = f.text_field :title
+    %br/
+    = label_tag :slug
+    = f.text_field :slug
+    %br/
+    = label_tag :description
+    = f.text_area :description
+    %br/
+    = label_tag :sort_index
+    = f.number_field :sort_index
+    %br/
+    = image_tag(@project.previewImage, class: 'manage-previewimage')
+    = label_tag :previewImage
+    = f.file_field :previewImage
+    .separator
+    %br/
+    - @project.images.each_with_index do |image, index|
+      = image_tag(image, class: 'manage-images')
+      = link_to 'Delete image', '/manage/edit/' + @project.slug + '/delete_image' + '/' + index.to_s, :method => :post, class: 'delete-image-button'
+    = label_tag :images
+    = f.file_field :images, multiple: true
+    %br/
+    = label_tag :link_name
+    = f.text_field :link_name
+    %br/
+    = label_tag :link_url
+    = f.text_field :link_url
+    %br/
+    = button_tag 'Submit', type: :submit
 
-= link_to 'Back', '/manage'
+  .back-link
+    = link_to 'Back', '/manage'
